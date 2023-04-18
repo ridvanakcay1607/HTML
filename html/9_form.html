@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--Seo uyum html kodları-->
+    <meta name="keywords" content="Programlama, Code, Yazılım"> <!--google aramalarında öne çıkaran etiketler-->
+    <meta name="description" content="Programlama hakkında herşey">
+    <!--google arama sonucunda Web site linkinin altındaki açıklama-->
+    <meta name="author" content="R.Akcay"> <!--Web sitesinin yazarını tanımlar-->
+    <title>code lernen</title>
+
+</head>
+
+<body>
+
+
+    <!--! Form elemanları kullanımı ve form yönlendirme:
+    GET ve POST methodları:
+    get: verileri olduğu gibi gönderir
+    post: güvenlik nedeniyle verileri şifreleyerek gönderir URL de gözükmez ve tercih edilendir.
+    Form yönlendirme yapmak için 'action' öz niteliği kullanılır.
+    Formlar kullanıcıyla etkileşim sağlanan noktadır-->
+
+    <h1>Kayıt Formu</h1>
+    <form action="3_Media-iframe.html" style="margin-top: 30px; margin-left: 20px;" method="get">
+
+        <!--!text -->
+        <div style="margin-bottom: 10px;">
+            <label for="ad">Isim:</label>
+            <!-- label: 'Adınızı girin' üzerine tıklandığında butona fokuslanılması için kullanılır.
+            for ismi ile id isminin aynı olması gerekir-->
+            <!-- for: bu input için demek-->
+            <input type="text" id="ad" name="ad" autofocus>
+            <!--name: her input ve objenin name isminde parametresi olur, kullanılan form elemanının açıklayıcı
+            metnidir -->
+            <!--placeholder: buton içinde şeffaf yazı / ipucu yazdırır -->
+            <!--value: kutu içinde sabit olarak yazı yazdırır -->
+            <!--autofocus: sayfa açılır açılmaz fokuslanır-->
+        </div>
+
+        <!--tablo etiketi kullanılarak ad ve soyad butonları eşit hizalı yapılır
+        <table>
+            <tr>
+                <td>ad</td>
+                <td><input type="text"></td>
+            </tr>
+
+            <tr>
+                <td>soyad</td>
+                <td><input type="text"></td>
+            </tr>
+        </table> -->
+
+
+        <div style="margin-bottom: 10px;">
+            <label for="soyad">Soy isim :</label>
+            <input type="text" id="soyad" name="soyad" maxlength="5">
+            <!--maxlength; değeri sınırlar -->
+        </div>
+
+
+        <div style="margin-bottom: 10px;">
+            <label for="kimlik">Kimlik numarası :</label>
+            <input type="text" id="kimlik" name="kimlik" readonly value="123456789">
+            <!--readonly; değeri değiştirilemez yapar -->
+        </div>
+
+
+
+
+        <!--!tel -->
+        <div style="margin-bottom: 10px;">
+            <label for="t">Telefon Numarası :</label>
+            <input type="tel" id="t" name="t" placeholder="0151-xxx-xxx-xx" required min="5" max="15">
+            <!--placeholder; ipucu verir
+            required; alanın doldurulmasını zorlar -->
+        </div>
+
+
+
+        <!--!email -->
+        <div style="margin-bottom: 10px;">
+            <label for="email">E-Mail adresi giriniz :</label>
+            <input type="email" id="email" placeholder="....." name="email" value=".....@gmail.com">
+            <!--value; varsayılan yapar -->
+            <!-- autocomplete="off" veya "on" ise butonda önckeki giriş önerilerini açar veya kapatır -->
+        </div>
+
+
+
+        <!--!password -->
+        <div style="margin-bottom: 10px;">
+            <label for="password">Password giriniz :</label>
+            <input type="password" id="password" placeholder="********" name="password">
+            <!--type ye password verildiğinden şifre görünmez olur -->
+        </div>
+
+
+
+        <!--!date -->
+        <div style="margin-bottom: 10px;">
+            <label for="date">Doğum tarihi giriniz :</label>
+            <input type="date" id="date" name="date">
+        </div>
+
+
+
+
+        <!--!time -->
+        <div style="margin-bottom: 10px;">
+            <label for="time">Randevu saatini giriniz :</label>
+            <input type="time" id="time" name="time">
+        </div>
+
+
+
+
+        <!--!radio -->
+        <div style="margin-bottom: 10px;">
+            <input type="radio" id="e" name="cinsiyet" value="Erkek" checked>
+            <label for="e">Erkek</label>
+            <input type="radio" id="k" name="cinsiyet" value="Kadın">
+            <label for="k">Kadın</label>
+            <input type="radio" id="b" name="cinsiyet" value="Belirtmek istemiyorum">
+            <label for="b">Belirtmek istemiyorum</label>
+            <!-- üç seçenekten sadece biri seçileceği için name değerleri aynı olmak zorunda -->
+            <!-- checked değeri ile bu üç seçenekten birisi seçili olarak işaretlenebilir -->
+        </div>
+
+
+
+        <!--!checkbox -->
+        <div style="margin-bottom: 10px;">
+            <h4>Seyehat etmek istediğiniz ülkeleri seçiniz</h4>
+            <input type="checkbox" id="a" name="ülke1" value="Almanya">
+            <label for="a">Almanya</label>
+            <input type="checkbox" id="u" name="ülke2" value="USA">
+            <label for="u">USA</label>
+            <input type="checkbox" id="i" name="ülke3" value="İsviçre">
+            <label for="i">İsviçre</label>
+            <br>
+            <input type="checkbox">
+            <label for="hatırla">Beni hatırla</label>
+        </div>
+
+
+
+        <!--!number -->
+        <div style="margin-bottom: 10px;">
+            <label for="adet">Adet seçiniz</label>
+            <input type="number" id="adet" placeholder="1" name="adet" min="1" max="10"> <!--min- max değerleridir -->
+        </div>
+
+
+
+
+        <!-- range
+        HTML etiketi, kullanıcının belirli bir aralık içinde sayısal bir değer seçmesine olanak 
+        tanıyan bir girdi (input) etiketidir. Bu etiket, HTML5 ile tanıtılmıştır. Bu etiket, bir kaydırma çubuğu şeklinde 
+        kullanıcı arayüzü sunar ve kullanıcının bir aralıkta bir değer seçmesine olanak tanır. Seçilen değer, kaydırma
+        çubuğunun konumuna bağlı olarak otomatik olarak güncellenir. Kaydırma çubuğu, belirli bir aralıkta sayısal değerler 
+        arasında hareket etmesine olanak tanır. <input type="range"> etiketi, web formu oluşturmak için kullanışlı bir 
+        araçtır. Örneğin, bir kullanıcının bir ürün miktarını seçmesine veya bir formda belirli bir sayı aralığına ait
+        verileri göstermesine izin vermek için kullanılabilir.-->
+
+        <!--!range -->
+        <div style="margin-bottom: 10px;">
+            <label for="kaydır">Adet seçiniz</label>
+            <input type="range" id="kaydır" name="kaydır" min="1" max="20" step="2">
+        </div>
+        <!-- step ile istenilen sayı kadar atlatılabilir -->
+
+
+
+
+
+        <!--!search -->
+        <div style="margin-bottom: 10px;">
+            <label for="ara-sil">Bul</label>
+            <input type="search" id="ara-sil" name="ara-sil" min="1" max="20">
+        </div>
+
+
+
+
+
+        <!--!details 
+        Js deki Accordion özelliği ile aynıdır. Bir butona veya yazıya tıklayınca alta doğru açılmasını sağlar-->
+        <details>
+            <summary>Ürünü ücretsiz iade edebilir miyim?</summary>
+            <p>Evet. Yasal olarak 30 gün içinde iade hakkı vardır.</p>
+        </details>
+
+        <details>
+            <summary>Hangi ödeme yöntemlerini kullanabilirim?</summary>
+            <p>Paypal - Kredi Kartı - Klarna - SEPA</p>
+        </details>
+
+
+
+
+
+
+        <!--!spelcheck 
+        yazım denetimi yapar. Yazının doğru/yanlış olma durumunu kontrol eder. contenteditable="" : şartı ifade eder-->
+
+        <p spellcheck="true" contenteditable>
+            Metin kontrol aracıyım
+        </p>
+
+
+
+
+
+
+        <!--!meter 
+        meter: iki değer arasındaki farkı çıkarır
+        value verilen değerin yüzdelik kısmını ifade eder. örn: yükleme barında %20 lik alanın kapsandığı gösteriliyor-->
+
+        <label for="Progress"> Progress/Yükleme barı 1 : </label>
+        <meter id="Progress" min="0" max="100" value="20"></meter>
+        <br>
+        <label for="Progress"> Progress/Yükleme barı 2 : </label>
+        <progress min="0" max="100" value="50"></progress>
+
+
+
+
+
+
+
+        <!--!select -->
+
+        <!-- tekli seçim -->
+        <div style="margin-bottom: 10px;">
+            <label for="yazılım">Programlama dilini seçiniz</label>
+            <select name="yazılım" id="yazılım">
+
+                <optgroup label="Front-end">
+                    <option value="yazılım" selected>HTML5</option>
+                    <option value="yazılım">CSS3</option> <!--selected; varsayılan yapar -->
+                    <option value="yazılım">JavaScript</option>
+                <optgroup>
+
+                <optgroup label="Back-end">
+                    <option value="yazılım">Java</option>
+                    <option value="yazılım">Python</option>
+                    <option value="yazılım">JavaScript</option>
+                </optgroup>
+                <!-- optgroup : optionları gruplandırmak için kullanılır-->
+
+
+            </select>
+
+            <!-- çoklu seçim -->
+            <select name="egitimler" id="egitim" multiple> <!--multiple; çoklu seçim yapar -->
+                <option value="egitim">Lisans</option>
+                <option value="egitim" selected>Yüksek Lisans</option>
+                <option value="egitim">Doktora</option>
+            </select>
+        </div>
+
+
+
+
+
+        <!--!datalist -->
+        <label for="">Programlama dilini seçiniz</label>
+        <input list="diller" style="margin-bottom: 10px;" name="diller">
+        <datalist id="diller">
+            <option value="HTML5">
+            <option value="CSS3">
+            <option value="JavaScript">
+        </datalist>
+        <!-- option sadece açılır olarak kalmak zorunda -->
+
+
+
+
+
+        <!--!textarea -->
+        <div style="margin-bottom: 10px;">
+            <textarea name="mesaj" id="mesaj" placeholder="mesajınızı buraya yazınız" cols="30" rows="10"
+                maxlength="1"></textarea>
+        </div>
+        <!-- maxlength: metin uzunluğunu belirler -->
+
+
+
+
+
+
+        <!--!fieldset
+        gruplandırma şablonu -->
+        <fieldset>
+            <legend>Başvuru Formu</legend>
+            <label for="ad">Isim Soyisim :</label>
+            <input type="text" id="ad" name="ad">
+            <br>
+            <label for="tel">Iletişim :</label>
+            <input type="text" id="tel" name="iletisim">
+        </fieldset>
+        <!-- legend ile başlık yapılır -->
+
+
+
+
+        <!--!color -->
+        <div style="margin-bottom: 10px;">
+            <label for="renk">Renk seçiniz :</label>
+            <input type="color" id="renk" name="renk">
+        </div>
+
+
+
+
+
+        <!--!file -->
+        <div style="margin-bottom: 10px;">
+            <label for="dosya">Dosya seç :</label>
+            <input type="file" id="dosya" name="dosya" multiple=""> <!--multiple; çoklu dosya seçebilmek için -->
+        </div>
+        <!-- accept: sadece istenilen dosya formatlarının seçilmesini sağlar -->
+
+
+
+
+        <!--!submit -->
+        <input type="submit" value="Gönder">
+
+
+
+        <!--!reset -->
+        <input type="reset" value="Temizle">
+        <!-- formaction=" "  ile form action a
+             formmethod="GET/POST" ile de method a (ikinci bir input oluşturarak)
+             müdahale edilebiliyor.Ayrıca formtarget ile de formmethod yapıldığında
+             sayfanın nasıl açılacağı(aynı veya yeni sekme) belirlenir-->
+
+
+
+        <!--!button -->
+        <button disabled>kayıt ol</button> <!--disabled; değeri deaktif yapar -->
+
+        <button type="submit" formtarget="_blank">Gönder</button>
+        <!--  <input type="submit" value="Gönder"> ile aynı işlevi görür.
+        formtarget="_blank" ; formu yeni sayfada ilgili sayfaya yönlendirir.
+        not:yönlendirilecek sayfayı form başlangıcında action="3_Media-iframe.html" olarak yazdım.
+        örneğin; kayıt ol ve giriş yap class ları oluşturulur ve 'kayıt ol' class ında 'giriş yap' sayfasına yönlendirilir-->
+
+
+
+
+        <!-- Not: Oluşturulan Form a dışarıdan başka bir input veya form eklemek istersen
+        
+        <input list = "Programlama dilleri" form = ".........">  noktalı kısma diğer formun id si yazılır-->
+
+
+
+    </form>
+
+
+</body>
+
+</html>

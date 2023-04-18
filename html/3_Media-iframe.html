@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--Seo uyum html kodları-->
+    <meta name="keywords" content="Programlama, Code, Yazılım"> <!--google aramalarında öne çıkaran etiketler-->
+    <meta name="description" content="Programlama hakkında herşey">
+    <!--google arama sonucunda Web site linkinin altındaki açıklama-->
+    <meta name="author" content="R.Akcay"> <!--Web sitesinin yazarını tanımlar-->
+    <title>code lernen</title>
+
+
+    <!--!<video etiketi için px ayarlaması css kodu ile yapıldı-->
+    <style>
+        video {
+            width: 100%;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+
+
+    <!--!<img>
+    resim yüklemek (klasörden/link ile) için kullanılır ve ./ kısayolu ile hedef klasörden ../ ile bir üst klasörden dosya çağrılır.
+    img etiketi HTML5 ile gelen <figure> etiketi içinde kullanılır. <figcaption> etiketi ise resim hakkında açıklama için kullanılır -->
+
+    <figure>
+        <img src="/HTML/image/bild01.jpg" height="100%" width="100%" alt="monkey" title="monkey">
+        <figcaption>Resim Açıklaması</figcaption>
+    </figure>
+
+    <figure>
+        <img src="https://assets.ubuntu.com/v1/f145e15a-K8s_Multi-cloud_solid.svg" height="100%" width="100%" alt=""
+            title="ubuntu sitesinden">
+    </figure>
+
+
+
+
+
+
+
+
+    <!--!<video>
+    video ekleme etiketi,
+    play düğmesi 'controls'
+    otomatik oynatma 'autoplay'
+    döngü için 'loop'
+    videoya poster eklemek 'poster'
+    videoya altyazı eklemek 'track' ile yapılır-->
+
+    <video controls poster="../media/foto.jpg">
+        <source src="../video/video.mp4" type="video/mp4">
+        <track src="subtitle-en.vtt" kind="subtitles" srclang="en" label="İngilizce">
+        <track src="subtitle-de.vtt" kind="subtitles" srclang="de" label="Almanca">
+    </video>
+
+
+
+    <!--!<progress>
+    HTML5'de yer alan <progress> etiketi, bir işlemin veya görevin yürütülme durumunu göstermek için kullanılan bir etikettir.
+    Bu etiket, ilerleme çubuğu veya ilerleme göstergesi olarak da adlandırılır. <progress> etiketi, value ve max öznitelikleri
+    ile birlikte kullanılır. value özniteliği, işlemin tamamlanmış yüzdesini veya değerini belirtirken, max özniteliği ise 
+    işlem tamamlanana kadar ulaşılabilecek maksimum değeri belirtir.-->
+
+    <div>
+        <progress min="0" max="100" value="50"></progress>
+    </div>
+
+
+
+
+    <!--!<audio>
+    ses dosyası ekleme etiketi,
+    play düğmesi 'controls' ile
+    otomatik oynatma 'autoplay' ile
+    sessize alma 'muted' ile
+    döngü ise 'loop' ile yapılır-->
+
+    <audio controls loop>
+        <source src="../audio/musik.mp3" type="audio/mpeg">
+    </audio>
+
+
+
+
+
+
+    <!--!<object> 
+    Sayfa içinde herhangi bir dosya eklamak için kullanılır   -->
+    <object data="../file/Emmet Cheat Sheet.pdf" width="500px" height="500px"></object>
+    <!-- <embed src=""> etiketi de aynı işlevi sağlıyor-->
+
+
+
+
+
+    <!--!<iframe>
+    web sayfası içine başka bir web sayfası ekler-->
+    <iframe src="https://www.howmanypeopleareinspacerightnow.com/" style="height: 300px; width: 500px; border: none;">
+    </iframe>
+
+
+
+    <iframe width="500" height="315" src="https://www.youtube.com/embed/dBip43LwXHo" title="YouTube video player">
+    </iframe>
+
+
+
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5976.800405884768!2d11.04055894831309!3d50.96190567585447!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a472d1f154335f%3A0x9e2ec7edf2bf1e42!2sJobcenter%20Erfurt!5e0!3m2!1str!2sde!4v1646612270352!5m2!1str!2sde"
+        width="500" height="310" frameborder="1" scrolling="no">
+    </iframe>
+
+
+
+
+    <a href="https://giphy.com/" target="xxxxx"> GIPHY</a> |
+    <a href="https://superdesigner.co/" target="xxxxx"> Superdesigner</a>
+
+    <iframe src="https://giphy.com/" name="xxxxx" width="500px" height="300px"></iframe>
+    <!-- iframe çalışması için target ve name isimleri aynı olmak zorunda, aynı olmazsa siteler yeni seçmede açılıyor -->
+
+
+</body>
+
+</html>

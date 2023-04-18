@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--Seo uyum html kodları-->
+    <meta name="keywords" content="Programlama, Code, Yazılım"> <!--google aramalarında öne çıkaran etiketler-->
+    <meta name="description" content="Programlama hakkında herşey">
+    <!--google arama sonucunda Web site linkinin altındaki açıklama-->
+    <meta name="author" content="R.Akcay"> <!--Web sitesinin yazarını tanımlar-->
+    <title>code lernen</title>
+
+
+
+    <!-- 3- Harici CSS / External (import) kullanımı: 
+    kod karışıklığını önlemek için bu kullanım tercih edilir--->
+    <link rel="stylesheet" href="11_CSS-kullanımı">
+
+
+
+    <!-- 2- Dahili CSS / Internal kullanımı--->
+    <style>
+        body {
+            background-color: darkorange;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        h1 {
+            color: cornflowerblue;
+        }
+
+        h2 {
+            color: brown;
+        }
+    </style>
+    <!-- background-size: cover; resmin ekranı kaplamasını sağlar
+    background-repeat: no-repeat; eğer resim küçükse ekranda tekrarlanır. Tekrar olmasın isteniyorsa bu yapılır-->
+
+    <!--NOT:
+    2. ve 3. tanımlama 'head' etiketleri içinde yapılır--->
+
+
+</head>
+
+
+<body>
+
+    <!-- 1- Satır içi CSS / Inline kullanımı--->
+    <h1 style="color: blueviolet;">Inline css kullanımı</h1>
+    <!-- yukarıda head/style içindeki h1 etiketi işlevsiz kalır çünkü, 
+    ilk önce body ye en yakın olan h1 içindeki css kodu çalışır. Aynı şekilde
+    3. Harici CSS / External css tanımlama kodu da çalışmaz, çünkü daha öncesinde 
+    tanımlanan css kodları çalışır.--->
+
+    <h2>Lorem ipsum dolor sit amet.</h2>
+
+
+
+
+
+</body>
+
+</html>

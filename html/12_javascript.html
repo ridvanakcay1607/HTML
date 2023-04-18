@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--Seo uyum html kodları-->
+    <meta name="keywords" content="Programlama, Code, Yazılım"> <!--google aramalarında öne çıkaran etiketler-->
+    <meta name="description" content="Programlama hakkında herşey">
+    <!--google arama sonucunda Web site linkinin altındaki açıklama-->
+    <meta name="author" content="R.Akcay"><!--Web sitesinin yazarını tanımlar-->
+    <title>code lernen</title>
+
+</head>
+
+<body>
+
+    <!-- HTML de Javascript kodlarının dahil edilmesi ve kullanımı-->
+
+    <!-- 1. Yol:
+    sayfa içi yöntem-->
+
+    <div id="test"></div> <!-- id oluşturuldu-->
+    <script>
+        document.getElementById("test").innerHTML = "code lernen"
+    </script>
+
+
+
+    <!-- 2. Yol: sayfa dışı yöntem-->
+    <script src="14_javascript.js"></script>
+
+
+
+    <!-- 3. Yol: HTML etiketi içerisinde-->
+    <button type="button" onclick="document.
+        getElementById ('tarih').
+        innerHTML = Date()"> tarihi ekrana yazdırmak için <strong>tıklayınız</strong> 
+    </button>
+    <div id="tarih"></div> <!-- id oluşturuldu-->
+    <!-- bu yöntemde sayfa yenilenmeden dinamik olarak sonuç verir yani tıklanarak sonuç alınır.-->
+
+
+</body>
+
+</html>

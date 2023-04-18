@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--Seo uyum html kodları-->
+    <meta name="keywords" content="Programlama, Code, Yazılım"> <!--google aramalarında öne çıkaran etiketler-->
+    <meta name="description" content="Programlama hakkında herşey">
+    <!--google arama sonucunda Web site linkinin altındaki açıklama-->
+    <meta name="author" content="R.Akcay"> <!--Web sitesinin yazarını tanımlar-->
+    <title>code lernen</title>
+
+</head>
+
+<body>
+
+
+    <!--<ul>.....</ul> sırasız liste etiketidir. type parametresi vardır
+    type="circle" attribute(öznitelik) ile içi boş daire, 
+    type="disc" ile içi dolu daire,
+    type="square" ile kare, 
+    type="none" ile herhangi bir işaret olmadan liste oluşturulur 
+    örnek kısayol; ul>li*3>a-->
+    <h1 style="background-color: darkorange;">sırasız liste(unordered)</h1>
+
+    <!-- HTML5 ile birlikte tüm liste etiketleri  <nav> etiketelirinin arasında kullanılır-->
+    <nav>
+        <ul type="disc">
+            <li>Yazılım</li>
+            <ul type="square">
+                <li>Java</li>
+                <li>Lambda</li>
+                <li>SQL</li>
+            </ul>
+
+            <li>Tasarım</li>
+            <li>3D</li>
+        </ul>
+    </nav>
+
+
+
+
+
+
+
+    <!--<ol>.....</ol> sıralı liste etiketidir,
+    type="" attribute(öznitelik) ile sıralama çeşitleri(1-A-a-i-I) kullanılabilir,
+    start="" attribute(öznitelik) ise verilen numara ile sıralama başlatır -->
+    <h1 style="background-color: chartreuse;">sıralı liste(ordered)</h1>
+
+    <nav>
+        <ol start="5">
+            <li>Tasarım</li>
+            <ol type="I">
+                <li>Adobe</li>
+                <li>Figma</li>
+                <li>Photoshop</li>
+            </ol>
+            <li>3D</li>
+        </ol>
+    </nav>
+
+
+
+</body>
+
+</html>
